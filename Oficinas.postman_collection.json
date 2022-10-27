@@ -1,0 +1,731 @@
+{
+	"info": {
+		"_postman_id": "4efe2ef2-a6e7-4f80-b224-4932be737e2f",
+		"name": "Oficinas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "PostUsuarioCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeCompleto\": \"Joao Gilberto cliente\",\r\n  \"email\": \"joaogilberto350@hotmail.com\",\r\n  \"dataNascimento\": \"1999-02-26T15:33:14.783Z\",\r\n  \"senha\": \"Pipoca123#\",\r\n  \"role\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7100/api/usuario",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUsuarioById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7100/api/usuario/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"usuario",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"joaogilberto350@hotmail.com\",\r\n  \"senha\": \"Pipoca123#\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7100/api/usuario/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"usuario",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostUsuarioEmpregado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeCompleto\": \"Joao Gilberto Funcionario\",\r\n  \"email\": \"joaogilberto351@hotmail.com\",\r\n  \"dataNascimento\": \"1999-02-26T15:33:14.783Z\",\r\n  \"senha\": \"Pipoca123#\",\r\n  \"role\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7100/api/usuario",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginEmpregado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"joaogilberto351@hotmail.com\",\r\n  \"senha\": \"Pipoca123#\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7100/api/usuario/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"usuario",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Agendamento",
+			"item": [
+				{
+					"name": "GetAgendamento",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImpvYW9naWxiZXJ0bzM1MUBob3RtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkVtcHJlZ2FkbyIsImV4cCI6MTY1NTc3MTQxNSwiaXNzIjoiT2ZpY2luYSIsImF1ZCI6IkNsaWVudE9maWNpbmEifQ.pDjg596OcpH0jA6Q11ruEHaF_zJuO6Pm17iYkILgALY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7100/api/agendamento",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"agendamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostAgendamento",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImpvYW9naWxiZXJ0bzM1MEBob3RtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkNsaWVudGUiLCJleHAiOjE2NTU3NjkzMTMsImlzcyI6Ik9maWNpbmEiLCJhdWQiOiJDbGllbnRPZmljaW5hIn0.-VcPVIGXHcl8Vo8CpU0vnXs3j0CZbni2gV0eNYbOn_M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idOficina\": 1,\r\n  \"idServico\": 1,\r\n  \"idUsuario\": 1,\r\n  \"dataAgendamento\": \"2022-06-20T15:59:49.564Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7100/api/agendamento",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"agendamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAgendamentoById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImpvYW9naWxiZXJ0bzM1MEBob3RtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkNsaWVudGUiLCJleHAiOjE2NTU3NjkzMTMsImlzcyI6Ik9maWNpbmEiLCJhdWQiOiJDbGllbnRPZmljaW5hIn0.-VcPVIGXHcl8Vo8CpU0vnXs3j0CZbni2gV0eNYbOn_M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7100/api/agendamento/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"agendamento",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutAgendamento",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImpvYW9naWxiZXJ0bzM1MEBob3RtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkNsaWVudGUiLCJleHAiOjE2NTU3NjkzMTMsImlzcyI6Ik9maWNpbmEiLCJhdWQiOiJDbGllbnRPZmljaW5hIn0.-VcPVIGXHcl8Vo8CpU0vnXs3j0CZbni2gV0eNYbOn_M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"idServico\": 1,\r\n  \"dataAgendamento\": \"2022-06-20T17:37:40.069Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7100/api/agendamento?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"agendamento"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAgendamento",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImpvYW9naWxiZXJ0bzM1MEBob3RtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkNsaWVudGUiLCJleHAiOjE2NTU3NjkzMTMsImlzcyI6Ik9maWNpbmEiLCJhdWQiOiJDbGllbnRPZmljaW5hIn0.-VcPVIGXHcl8Vo8CpU0vnXs3j0CZbni2gV0eNYbOn_M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7100/api/agendamento?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"agendamento"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByDate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImpvYW9naWxiZXJ0bzM1MEBob3RtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkNsaWVudGUiLCJleHAiOjE2NTU3NjkzMTMsImlzcyI6Ik9maWNpbmEiLCJhdWQiOiJDbGllbnRPZmljaW5hIn0.-VcPVIGXHcl8Vo8CpU0vnXs3j0CZbni2gV0eNYbOn_M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7100/api/agendamento/getbydate?dataInicio=2020-06-20&dataFim=2022-06-20",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"agendamento",
+								"getbydate"
+							],
+							"query": [
+								{
+									"key": "dataInicio",
+									"value": "2020-06-20"
+								},
+								{
+									"key": "dataFim",
+									"value": "2022-06-20"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Oficina",
+			"item": [
+				{
+					"name": "PostOficina",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImpvYW9naWxiZXJ0bzM1MUBob3RtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkVtcHJlZ2FkbyIsImV4cCI6MTY1NTc3MTQxNSwiaXNzIjoiT2ZpY2luYSIsImF1ZCI6IkNsaWVudE9maWNpbmEifQ.pDjg596OcpH0jA6Q11ruEHaF_zJuO6Pm17iYkILgALY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Oficina do Marcao\",\r\n  \"qtdMaxUnidadeTrabralho\": 35,\r\n  \"cnpj\": \"23022267000185\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7100/api/oficina",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"oficina"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOficina",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImpvYW9naWxiZXJ0bzM1MEBob3RtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkNsaWVudGUiLCJleHAiOjE2NTU3NjkzMTMsImlzcyI6Ik9maWNpbmEiLCJhdWQiOiJDbGllbnRPZmljaW5hIn0.-VcPVIGXHcl8Vo8CpU0vnXs3j0CZbni2gV0eNYbOn_M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7100/api/oficina",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"oficina"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOficinaById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImpvYW9naWxiZXJ0bzM1MEBob3RtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkNsaWVudGUiLCJleHAiOjE2NTU3NjkzMTMsImlzcyI6Ik9maWNpbmEiLCJhdWQiOiJDbGllbnRPZmljaW5hIn0.-VcPVIGXHcl8Vo8CpU0vnXs3j0CZbni2gV0eNYbOn_M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7100/api/oficina/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"oficina",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutOficina",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImpvYW9naWxiZXJ0bzM1MEBob3RtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkNsaWVudGUiLCJleHAiOjE2NTU3NjkzMTMsImlzcyI6Ik9maWNpbmEiLCJhdWQiOiJDbGllbnRPZmljaW5hIn0.-VcPVIGXHcl8Vo8CpU0vnXs3j0CZbni2gV0eNYbOn_M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"nome\": \"Oficina 2\",\r\n  \"qtdMaxUnidadeTrabralho\": 45,\r\n  \"cnpj\": \"23022267000185\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7100/api/oficina/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"oficina",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteOficina",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7100/api/oficina?Id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"oficina"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Servico",
+			"item": [
+				{
+					"name": "PostServico",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImpvYW9naWxiZXJ0bzM1MUBob3RtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkVtcHJlZ2FkbyIsImV4cCI6MTY1NTc3MTQxNSwiaXNzIjoiT2ZpY2luYSIsImF1ZCI6IkNsaWVudE9maWNpbmEifQ.pDjg596OcpH0jA6Q11ruEHaF_zJuO6Pm17iYkILgALY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"unidadeTrabralho\": 2,\r\n  \"descricao\": \"Lavagem\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7100/api/servico",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"servico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetServico",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImpvYW9naWxiZXJ0bzM1MEBob3RtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkNsaWVudGUiLCJleHAiOjE2NTU3NjkzMTMsImlzcyI6Ik9maWNpbmEiLCJhdWQiOiJDbGllbnRPZmljaW5hIn0.-VcPVIGXHcl8Vo8CpU0vnXs3j0CZbni2gV0eNYbOn_M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7100/api/servico",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"servico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetServicoById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImpvYW9naWxiZXJ0bzM1MEBob3RtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkNsaWVudGUiLCJleHAiOjE2NTU3NjkzMTMsImlzcyI6Ik9maWNpbmEiLCJhdWQiOiJDbGllbnRPZmljaW5hIn0.-VcPVIGXHcl8Vo8CpU0vnXs3j0CZbni2gV0eNYbOn_M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7100/api/servico/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"servico",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutServico",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImpvYW9naWxiZXJ0bzM1MEBob3RtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkNsaWVudGUiLCJleHAiOjE2NTU3NjkzMTMsImlzcyI6Ik9maWNpbmEiLCJhdWQiOiJDbGllbnRPZmljaW5hIn0.-VcPVIGXHcl8Vo8CpU0vnXs3j0CZbni2gV0eNYbOn_M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 2,\r\n  \"unidadeTrabralho\": 5,\r\n  \"descricao\": \"Nova Lavagem\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7100/api/servico",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"servico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteServico",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImpvYW9naWxiZXJ0bzM1MEBob3RtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkNsaWVudGUiLCJleHAiOjE2NTU3NjkzMTMsImlzcyI6Ik9maWNpbmEiLCJhdWQiOiJDbGllbnRPZmljaW5hIn0.-VcPVIGXHcl8Vo8CpU0vnXs3j0CZbni2gV0eNYbOn_M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7100/api/servico?Id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7100",
+							"path": [
+								"api",
+								"servico"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
