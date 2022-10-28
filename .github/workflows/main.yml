@@ -1,0 +1,41 @@
+name: DemoDeploy
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubunto-latest
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, word!
+
+  deploy-dev:
+    runs-on: ubunto-latest
+    environment:
+      name: dev
+      url: 'julioarruda.com'
+    needs: build
+    steps:
+      - name: Run a one-line script
+        run: echo Deploy Dev
+
+
+  deploy-hmg:
+    runs-on: ubunto-latest
+    environment:
+      name: hmg
+      url: 'julioarruda.com'
+    needs: deploy-dev
+    steps:
+      - name: Run a one-line script
+        run: echo Deploy Hmg
+
+  deploy-prd:
+    runs-on: ubunto-latest
+    environment:
+      name: prd
+      url: 'julioarruda.com'
+    needs: deploy-hmg
+    steps:
+      - name: Run a one-line script
+        run: echo Deploy Prd
